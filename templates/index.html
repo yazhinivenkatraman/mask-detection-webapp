@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mask Detection Web UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #eee;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        #controls {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+        #status {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            color: #0f0;
+        }
+        #video, #canvas {
+            border: 2px solid #555;
+            display: block;
+            margin-top: 10px;
+        }
+        #video { 
+            display: none;  /* hide raw webcam */ 
+        }
+    </style>
+</head>
+<body>
+    <h1>Mask Detection – WebCam Demo</h1>
+
+    <div id="controls">
+        <button id="startBtn">Start Camera</button>
+        <button id="stopBtn" disabled>Stop Camera</button>
+    </div>
+    <div id="status">Click "Start Camera" to begin.</div>
+
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas"></canvas>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
