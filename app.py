@@ -86,9 +86,6 @@ async def predict(file: UploadFile = File(...)):
 
     out_frame = face_mask_detector(frame)
 
-    # OPTIONAL: debug box to verify pipeline
-    # h, w = out_frame.shape[:2]
-    # cv2.rectangle(out_frame, (w//4, h//4), (3*w//4, 3*h//4), (0, 0, 255), 3)
 
     _, jpeg = cv2.imencode(".jpg", out_frame)
     return {"image": jpeg.tobytes().hex()}
